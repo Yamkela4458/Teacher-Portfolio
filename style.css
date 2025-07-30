@@ -1,0 +1,286 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(images/IMG_8528.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+header, section, footer {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.pop{
+    color: burlywood;
+}
+
+.float{
+  color: #e08753;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav a{
+    color: #0e54e1;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 40px;
+    position: relative;
+}
+
+nav a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: burlywood;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: #f5f5f5;
+  background-image: url(images/IMG_8518.JPG);
+  padding: 40px 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: bisque;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#experience{
+    color: #fff;
+}
+#experience h1{
+  color: #e08753;
+}
+
+#experience h2{
+  color: #79862a;
+}
+#experience p{
+  color: #d5f508;
+}
+#experience h3{
+  color: #94a812;
+}
+#skills h2{
+    color: #f38918;
+}
+.skills li {
+  display: inline-block;
+  color: #1e1e1e;
+  background: #e0f7fa;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#certifications h2{
+  color: #e08753;
+}
+#certifications h4{
+    color: #e04a09;
+}
+#contact{
+    color: #fff;
+}
+#contact h2{
+  color: #e3940a;
+}
+
+/* Animations */
+.pop {
+  animation: popIn 1s ease-in-out;
+}
+
+.pop {
+      font-family: monospace;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      animation: typing 4s steps(20, end), blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 20ch } /* Adjust to match text length */
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+.float {
+  animation: floatUp 2s infinite alternate;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#chatbot-header {
+  background: rgb(225, 139, 26);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#chatbot-messages {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#chatbot-input {
+  width: 75%;
+  border: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#chatbot-send {
+  width: 25%;
+  border: none;
+  background: rgb(146, 91, 20);
+  color: white;
+  font-weight: bold;
+}
+
+#toggle-dark{
+    background-color: gray;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #1e1e1e;
+}
+
+.dark-mode nav a {
+  color: #90caf9;
+}
+
+.about h4{
+    text-align: center;
+    color: #fff;
+}
+
+footer{
+  color: #d80e07;
+}
+.about{
+  background-image: url("images/IMG_8530.JPG");
+  background-size: 100%;
+  padding: 0;
+  width: 100%;
+}
+.about h1{
+  color: #e08753;
+}
+.about h4{
+  color: #f2a704;
+}
+#Resume{
+  color: #fff;
+  font-family: Cambria;
+  background-image: none;
+  background-color: #0b1204;
+}
+#Resume h1{
+  text-align: center;
+  color: #e08753;
+  text-decoration: underline;
+}
+#Resume h3{
+  text-align: center;
+  color: #ea7836;
+}
+#Resume h4{
+  text-align: center;
+  color: #c79108;
+}
+#Resume p{
+  text-align: center;
+}
+#Resume ul li{
+  text-align: center;
+  list-style: none;
+}
+
+.letter h3{
+  text-align: left;
+  color: #fff;
+}
+.letter h4{
+  text-align: justify;
+  color: #ee892a;
+}
+.letter p{
+  text-align: justify right;
+  color: #d6c01c;
+}
+.letter{
+  background-color: #0f0404;
+}
