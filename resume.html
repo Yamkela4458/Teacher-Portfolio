@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamkela Lusithi | Language Educator & EdTech Developer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Grotesk:wght@400;700&display=swap');
+
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #ddd;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+      position: relative;
+    }
+    a {
+      color: #ffae00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #00ccbb;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3.2rem;
+      color: #ff8800;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #e56c0a;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #eca707;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin: 0.2rem 0 1rem 0;
+      max-width: 800px;
+    }
+    ul {
+      max-width: 820px;
+      padding-left: 1.25rem;
+      margin: 0 0 1rem 0;
+      color: #aaa;
+    }
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+    .contact-info {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: #666;
+      user-select: all;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+    .section {
+      margin-bottom: 3rem;
+      border-left: 3px solid #00ffe1;
+      padding-left: 1rem;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+    .section:nth-child(1) { animation-delay: 0.3s; }
+    .section:nth-child(2) { animation-delay: 0.6s; }
+    .section:nth-child(3) { animation-delay: 0.9s; }
+    .section:nth-child(4) { animation-delay: 1.2s; }
+    .section:nth-child(5) { animation-delay: 1.5s; }
+    .section:nth-child(6) { animation-delay: 1.8s; }
+    .section:nth-child(7) { animation-delay: 2.1s; }
+    .highlight {
+      color: #00ffe1;
+      font-weight: 700;
+    }
+    .link-button {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background: linear-gradient(135deg, #00ffe1, #0066ff);
+      color: #000;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+    .link-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00ffe1;
+    }
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Background glow */
+    .glow {
+      position: fixed;
+      top: 10%;
+      left: 15%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(0,255,225,0.3) 0%, transparent 80%);
+      border-radius: 50%;
+      animation: glowMove 25s linear infinite alternate;
+      z-index: 1;
+    }
+    @keyframes glowMove {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(40px, 50px); }
+      50% { transform: translate(-30px, 30px); }
+      75% { transform: translate(20px, -40px); }
+      100% { transform: translate(0, 0); }
+    }
+    /* Subtle shimmer on section borders */
+    .section {
+      box-shadow:
+        0 0 12px 1px rgba(0,255,225,0.25);
+      border-left: 4px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #00ffe1 0%, #0066ff 100%);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      .container {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <h1>Yamkela Lusithi</h1>
+    <h2>Language Educator & EdTech Developer</h2>
+    <p class="contact-info">
+      📞 +27 66 543 0254 &nbsp;&nbsp;|&nbsp;&nbsp; 📧 <a href="mailto:lusithiyamkela@gmail.com">lusithiyamkela@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <a href="https://www.linkedin.com/in/yamkela-lusithi" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <a href="https://yamkela4458.github.io/Teacher-Portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </p>
+
+    <section class="section" id="summary">
+      <h3>Professional Summary</h3>
+      <p>
+        Language and literacy educator and researcher currently completing a <span class="highlight">B. Ed Honours</span> with a focus on academic language practices in educational institutions. Experienced in qualitative research, academic writing support, and digital pedagogy. Merges a background in foundation phase literacy with web development to build platforms that enhance educational access and academic writing skills.
+      </p>
+    </section>
+
+    <section class="section" id="core-competencies">
+      <h3>Core Competencies</h3>
+      <ul>
+        <li>Excellent communication</li>
+        <li>Attentive listening skills</li>
+        <li>Excellent research skills</li>
+        <li>Excellent lesson planning</li>
+        <li>Individualized learning</li>
+        <li>ESL/EFL Teaching</li>
+      </ul>
+    </section>
+
+    <section class="section" id="work-experience">
+      <h3>Work Experience</h3>
+      <ul>
+        <li>One-on-One learner evaluations</li>
+        <li>Curriculum Alignment</li>
+        <li>Excellent lesson planning</li>
+        <li>Individualized Learning</li>
+        <li>CEFR & CAPS</li>
+        <li>ESL / EFL Teaching</li>
+      </ul>
+      <h4>Educational Technology Developer (Freelance) — Remote (Jun 2024 – Present)</h4>
+      <ul>
+        <li>Designing and building interactive, mobile-first web platforms supporting teaching, learning, and academic skills using HTML5, CSS3, JavaScript, React.js.</li>
+        <li>Developed <a href="https://yamkela4458.github.io/MoneySave-Jr/" target="_blank" rel="noopener noreferrer">MoneySave Jr</a>, a financial literacy site for young learners with animated budget planners and responsive UI.</li>
+        <li>Developed <a href="https://yamkela4458.github.io/TheAcademics/" target="_blank" rel="noopener noreferrer">TheAcademics</a>, a writing support hub for university students offering research content and advanced filtering.</li>
+        <li>Built the "FNB Chatbot Simulation," a web-based learning experience demonstrating banking chatbot functions.</li>
+      </ul>
+      <h4>Volunteer Foundation Phase Teacher — Ndabankulu J.S.S, Eastern Cape (Jan 2024 – Dec 2024)</h4>
+      <ul>
+        <li>Taught English and Literacy to Grade R–3 learners using interactive, learner-centered pedagogy.</li>
+        <li>Improved reading fluency by 30% via phonics-based differentiated instruction.</li>
+        <li>Integrated Google Classroom and Zoom for blended learning.</li>
+        <li>Piloted an online phonics toolkit with PowerPoint, audio prompts, and micro lessons.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="education">
+      <h3>Education</h3>
+      <p><strong>B. Ed Hons</strong> – Language, Literacies & Literature (Part-Time)<br/>
+         University of Johannesburg | Expected Dec 2026</p>
+      <ul>
+        <li>Research: “Digital Literacies and Language Learning in Multilingual South African Classrooms”</li>
+        <li>Focus: Applied linguistics, multimodal literacy, and digital pedagogy</li>
+      </ul>
+      <p><strong>Bachelor of Education (Foundation Phase Teaching)</strong><br/>
+         Walter Sisulu University</p>
+    </section>
+
+    <section class="section" id="training-certifications">
+      <h3>Training and Certifications</h3>
+      <ul>
+        <li>Fundamentals of English Grammar – UniAthena, CIQ, UK (Dec 2024)</li>
+        <li>Certificate in Full Stack Development – FNB App Academy (Jul 2025)</li>
+        <li>Artificial Intelligence (AI) in the 4IR – University of Johannesburg (May 2025)</li>
+        <li>TEFL Certificate (120 Hours) – Teacher Record (Aug 2024)</li>
+        <li>SACE Registration Certificate – South African Council for Educators (Jul 2024)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="technical-skills">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>EdTech Integration: Google Classroom, Zoom, Kahoot, MS Teams</li>
+        <li>Research Tools: DOAJ, Google Scholar, Survey tools</li>
+        <li>Design: Responsive UI for Educational Platforms</li>
+        <li>Platforms: Canva, Google Workspace, Grammarly, Overleaf</li>
+      </ul>
+    </section>
+
+    <section class="section" id="projects">
+      <h3>Projects</h3>
+      <h4>Financial Literacy Educational Website</h4>
+      <p><a href="https://yamkela4458.github.io/MoneySave-Jr/" target="_blank" rel="noopener noreferrer">https://yamkela4458.github.io/MoneySave-Jr/</a></p>
+      <ul>
+        <li>Interactive educational site teaching financial literacy to primary learners.</li>
+        <li>Lesson-aligned tools: digital savings jars, weekly planning charts, budgeting simulations.</li>
+        <li>Focus on learning through play, habit formation, and contextualized financial education.</li>
+      </ul>
+      <h4>Educational Website for University Students</h4>
+      <p><a href="https://yamkela4458.github.io/TheAcademics/" target="_blank" rel="noopener noreferrer">https://yamkela4458.github.io/TheAcademics/</a></p>
+      <ul>
+        <li>Responsive platform offering curated academic writing and research materials.</li>
+        <li>Features include advanced search and filtering to enhance accessibility.</li>
+        <li>Collaborated with educators and students for usability improvements.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="hobbies-interests">
+      <h3>Hobbies & Interests</h3>
+      <ul>
+        <li>Creative Writing and Reading: Passionate about language and literature to enrich classroom discussions and student engagement.</li>
+        <li>Educational Technology Exploration: Enthusiastic about EdTech tools and digital learning platforms to enhance lesson delivery.</li>
+        <li>Outdoor Activities and Nature Walks: Promote mindfulness and environmental awareness, often incorporated into themed lessons.</li>
+        <li>Volunteering and Community Outreach: Active in youth mentorship and literacy programs for language learning and cultural exchange.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    // Cycle subtle text highlights in the Professional Summary for extra motion
+    const highlightPhrases = [
+      "B. Ed Honours in Language & Literacy",
+      "Qualitative research & academic writing",
+      "Foundation phase literacy & web dev",
+      "Building platforms for educational access"
+    ];
+
+    let highlightIndex = 0;
+    const summary = document.querySelector("#summary p");
+
+    setInterval(() => {
+      const baseText = "Language and literacy educator and researcher currently completing a ";
+      const afterText = " with a focus on academic language practices in educational institutions. Experienced in qualitative research, academic writing support, and digital pedagogy. Merges a background in foundation phase literacy with web development to build platforms that enhance educational access and academic writing skills.";
+      summary.innerHTML = `${baseText}<span class="highlight">${highlightPhrases[highlightIndex]}</span>${afterText}`;
+      highlightIndex = (highlightIndex + 1) % highlightPhrases.length;
+    }, 5000);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamkela Lusithi | About Section</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: slideDown 1.5s ease-out;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 20px;
+      border: 2px solid #ffd500;
+      box-shadow: 0 0 15px #ffc400;
+      margin-bottom: 2rem;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .about h4 {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #ffc400;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin: 1.5rem auto;
+      text-align: left;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .about h4:nth-of-type(1) { animation-delay: 0.2s; }
+    .about h4:nth-of-type(2) { animation-delay: 0.4s; }
+    .about h4:nth-of-type(3) { animation-delay: 0.6s; }
+    .about h4:nth-of-type(4) { animation-delay: 0.8s; }
+    .about h4:nth-of-type(5) { animation-delay: 1s; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #bbb;
+      border-top: 1px solid #333;
+      background: #111;
+    }
+
+    .stars, .lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .stars {
+      background: repeating-radial-gradient(#ce6102 1px, transparent 2px);
+      background-size: 5px 5px;
+      animation: starScroll 20s linear infinite;
+    }
+
+    .lines::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, transparent 90%, #ffae00 95%);
+      background-size: 100% 50px;
+      animation: lineMove 12s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes starScroll {
+      from { transform: translateY(0); }
+      to { transform: translateY(100px); }
+    }
+
+    @keyframes lineMove {
+      from { background-position: 0 0; }
+      to { background-position: 0 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="lines"></div>
+
+  <div class="about">
+    <h1>About Me...</h1>
+    <img src="images/IMG_7533.jpg" alt="Yamkela Lusithi" />
+    
+    <h4>
+      From the very beginning, I knew that I wanted to make a difference
+      in the lives of young learners. Growing up in a community where 
+      education was both a challenge and a key to opportunity, I developed 
+      a deep appreciation for the power of learning, and an even deeper desire 
+      to become the kind of teacher I once needed. That journey led me to 
+      pursue my Bachelor of Education in Foundation Phase Teaching at Walter
+      Sisulu University, where I immersed myself in understanding how children
+      grow, learn, and thrive.
+    </h4>
+
+    <h4>
+      During my undergraduate years, I quickly discovered a special passion for 
+      literacy. I was fascinated by how a single storybook could spark imagination, 
+      how phonics could unlock entire worlds for a child, and how a patient teacher 
+      could turn confusion into confidence. It wasn’t just about reading and writing—it 
+      was about empowering children with the tools to understand and express themselves. 
+      I began crafting creative lessons, experimenting with storytelling, puppetry, and 
+      digital platforms to bring language learning to life.
+    </h4>
+
+    <h4>
+      After graduating in 2024, I chose not to stop there. Fueled by a desire to deepen my 
+      expertise, I enrolled in an Honours Degree in Language, Literacy & Literature at the
+      University of Johannesburg. This program has opened my eyes to advanced pedagogical 
+      theories, research practices, and the socio-cultural dynamics of language acquisition. 
+      It has also pushed me to think critically and innovatively about the role of literacy 
+      in a rapidly changing world.
+    </h4>
+
+    <h4>
+      But what truly sets my journey apart is my integration of technology and education. I 
+      believe that the future of teaching lies at the intersection of heart and hardware, where 
+      compassion meets code. To prepare for this future, I earned a TEFL certification and pursued 
+      cutting-edge courses like Artificial Intelligence in the Fourth Industrial Revolution, also from 
+      the University of Johannesburg. These experiences have equipped me not just to teach, but to lead 
+      in modern classrooms that are hybrid, inclusive, and digitally enriched.
+    </h4>
+
+    <h4>
+      Today, I am not just an educator, I am a lifelong learner, a digital pioneer, and a literacy advocate 
+      committed to nurturing young minds with curiosity, creativity, and care. My mission is to empower 
+      the next generation with the skills, confidence, and vision they need to thrive because every child 
+      deserves a champion who believes in them, even before they believe in themselves.
+    </h4>
+  </div>
+
+  <footer>
+    <p>© 2025 Created by Yamkela Lusithi | All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

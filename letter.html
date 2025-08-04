@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamkela Lusithi | Cover Letter</title>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #ddd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 3rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .letter {
+      max-width: 700px;
+      background: #121212;
+      padding: 2.5rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 255, 225, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    h3, h4 {
+      color: #ff7300;
+      margin: 0 0 0.6rem 0;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation-fill-mode: forwards;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+      margin-top: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation-fill-mode: forwards;
+      color: #ccc;
+    }
+    /* Highlight key words */
+    p strong {
+      color: #ff7b00;
+      text-shadow: 0 0 6px #d2ba06;
+    }
+    /* Animations */
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Glow effect on letter container */
+    @keyframes subtleGlow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 255, 225, 0.15);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(255, 140, 0, 0.3);
+      }
+    }
+    .letter {
+      animation: subtleGlow 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="letter" id="letter">
+    <h3>19 Ameshoff Street</h3>
+    <h3>Braamfontein</h3>
+    <h3>Johannesburg</h3>
+    <h3>2001</h3>
+
+    <br/>
+
+    <h4>Dear Hiring Manager,</h4>
+    <p>I am writing to express my interest in the <strong>Educator position</strong> at your institution. I am confident in my ability to support and inspire learners in virtual environments, and I bring with me a passion for literacy development, learner engagement, and inclusive teaching practices.</p>
+
+    <p>I hold a <strong>Bachelor’s degree in Foundation Phase teaching</strong> that is accompanied by a 120-Hour TEFL (Teaching English as a Foreign Language) certificate. I’m currently pursuing a <strong>Bachelor of Education Honours degree in Languages, Literacy, and Literature</strong> at the University of Johannesburg.</p>
+
+    <p>I bring a wealth of teaching experience and a strong commitment to educational technology. My classroom experience has equipped me with the ability to manage diverse learning needs, encourage critical thinking, and foster meaningful connections with students. I believe in creating a safe, respectful, and stimulating learning environment where each learner feels valued and supported.</p>
+
+    <p>My teaching philosophy centres on building confidence and curiosity in students through well-structured lessons, ongoing formative assessment, and a commitment to continuous professional growth.</p>
+
+    <p>Thank you for considering my application. I will be honoured to contribute to your team and support your school’s vision for academic excellence.</p>
+
+    <h4>Sincerely,</h4>
+    <h4>Yamkela Lusithi</h4>
+  </div>
+
+  <script>
+    const letter = document.getElementById('letter');
+    const elements = [...letter.querySelectorAll('h3, h4, p')];
+
+    elements.forEach((el, i) => {
+      el.style.animation = `fadeSlideIn 0.8s ease forwards`;
+      el.style.animationDelay = `${i * 0.4}s`;
+    });
+  </script>
+</body>
+</html>
+

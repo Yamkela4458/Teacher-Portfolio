@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamkela Lusithi | EdTech Practitioner| Educator | Full Stack Developer | UJ Honours student (Academic Language Research & Digital Education)
+</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: #fa9804;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header, section, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    a, button {
+      color: inherit;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      margin: 1rem;
+      background: #1f1f1f;
+      color: #ff7300;
+      border-radius: 5px;
+      border: 2px solid #ffb700;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #ffea00;
+      color: #0a0a0a;
+    }
+
+    .typing {
+      width: fit-content;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ff7700;
+      animation: typing 3.5s steps(30, end), blink 0.7s infinite;
+      margin: auto;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .float-in {
+      animation: float-in 1.5s ease-in-out;
+    }
+
+    @keyframes float-in {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 800px;
+      box-shadow: 0 0 10px #a8ab7a;
+    }
+
+    .skills.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+
+    #chatbot {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 300px;
+      background: #111;
+      border: 1px solid #ffdd00;
+      border-top-left-radius: 10px;
+      color: white;
+    }
+
+    #chatbot-header {
+      background: #ffae00;
+      padding: 0.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    #chatbot-input {
+      width: 80%;
+      padding: 0.5rem;
+      border: none;
+    }
+
+    #chatbot-send {
+      width: 20%;
+      background: #cd7b01;
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+
+    .stars, .lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .stars {
+      background: repeating-radial-gradient(#a19f90 1px, transparent 2px);
+      background-size: 5px 5px;
+      animation: star-move 20s linear infinite;
+    }
+
+    @keyframes star-move {
+      from { transform: translateY(0); }
+      to { transform: translateY(100px); }
+    }
+
+    .lines::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, transparent 90%, #80908e 95%);
+      background-size: 100% 50px;
+      animation: move-lines 10s linear infinite;
+    }
+
+    @keyframes move-lines {
+      from { background-position: 0 0; }
+      to { background-position: 0 100px; }
+    }
+
+    body.dark-mode {
+      background-color: #f1f1f1;
+      color: #121212;
+    }
+
+    body.dark-mode .card {
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="lines"></div>
+
+  <header>
+    <h1 class="typing">Hello There! <br>This is Yamkela Lusithi...</h1>
+    <h3 class="float-in"> EdTech Practitioner | Full Stack Developer | Educator | Academic Researcher</h3>
+    <button id="toggle-dark"><a>Protect Your Eyes</button></a>
+  </br>
+</br>
+    <nav>
+      <a href="about.html"><button>About Me</button></a>
+    </br>
+  </br>
+      <a href="#experience"><button>Experience</button></a>
+  </br>
+</br>
+      <a href="#skills"><button>Skills</button></a>
+</br>
+</br>
+      <a href="#certifications"><button>Certifications</button></a>
+</br>
+</br>
+      <a href="#contact"><button>Contact Me</button></a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 class="typing">Empowering Young Minds Through <br>Literacy, Research, and Innovation</h2>
+    <h3 class="float-in">I’m a dedicated Teacher and educational researcher blending creativity, research, and technology to build a love of learning.</h3>
+    <a href="resume.html" class="btn" download>📄 Digital Resume | CV</a>
+    <a href="letter.html" class="btn" download>📄 Cover Letter</a>
+  </section>
+
+  <section id="experience">
+    <h1>Teaching Experience</h1>
+
+    <div class="job card">
+      <h2>Volunteer Foundation Phase Teacher</h2>
+      <h3>Ndabankulu J.S.S | Eastern Cape</h3>
+      <p><strong>Jan 2024 – Dec 2025</strong></p>
+      <ul>
+        <li>Taught English and Literacy to Grade R–3 learners using inquiry-based strategies.</li>
+        <li>Increased reading comprehension with differentiated phonics instruction.</li>
+        <li>Used Zoom and Google Classroom for blended teaching.</li>
+        <li>Adapted lessons based on one-on-one assessments.</li>
+        <li>Enhanced parent-teacher communication through WhatsApp newsletters.</li>
+      </ul>
+    </div>
+
+   
+  </section>
+
+  <section id="skills">
+    <h2><strong>Core Competencies</strong></h2>
+    <ul class="skills grid">
+      <li>Literacy & Phonics Instruction</li>
+      <li>Inquiry-Based Learning</li>
+      <li>Individual Learner Support</li>
+      <li>Google Classroom, Zoom</li>
+      <li>Canva for Education</li>
+      <li>Digital Assessment Tools</li>
+      <li>Excellent Lesson Planning</li>
+      <li>Curriculum Alignment</li>
+    </ul>
+
+    <h2><strong>Soft Skills</strong></h2>
+    <ul class="skills grid">
+      <li>Effective Communication</li>
+      <li>Attentive Listening</li>
+      <li>Patience</li>
+      <li>Problem Solving</li>
+      <li>Empathy</li>
+      <li>Critical Thinking</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Education</h2>
+    <div class="certs card">
+      <p><strong>B.Ed Honours</strong> – University of Johannesburg, Expected in December 2026 (In Progress)</p>
+      <p><strong>Fundamentals of English Grammar</strong> – UniAthena, Obtained in July 2025</p>
+      <p><strong>AI in the 4IR</strong> – University of Johannesburg, Obtained in May 2025</p>
+      <p><strong>120-Hour TEFL Certificate</strong> – Teacher Record, Obtained in August 2024</p>
+      <p><strong>Bachelor of Education (Foundation Phase Teaching)</strong> – WSU, Graduated in May 2024</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lusithiyamkela@gmail.com">lusithiyamkela@gmail.com</a></p>
+    <p>Alternate: <a href="mailto:yamkelalusithi1@gmail.com">yamkelalusithi1@gmail.com</a></p>
+    <p>Phone: <a href="tel:+27665430254">+27 66 543 0254</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Created by Yamkela Lusithi | All Rights Reserved.</p>
+  </footer>
+
+  <div id="chatbot" class="card">
+    <div id="chatbot-header"><img src="images/yummy-emoji.gif" width="40" /> Ask me anything here..</div>
+    <div id="chatbot-messages"></div>
+    <input type="text" id="chatbot-input" placeholder="Type your message..." />
+    <button id="chatbot-send">Send</button>
+  </div>
+
+  <audio id="typing-sound" src="sounds/typing.mp3" preload="auto"></audio>
+
+  <script>
+    document.getElementById("toggle-dark").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    const sound = document.getElementById("typing-sound");
+    document.querySelectorAll(".typing").forEach(el => {
+      el.addEventListener("animationstart", () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  </script>
+</body>
+</html>
+
